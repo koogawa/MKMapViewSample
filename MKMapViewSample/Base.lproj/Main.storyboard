@@ -35,10 +35,45 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="FKW-N5-3oK" id="VL6-qV-7u8"/>
+                        <segue destination="7FE-cf-kne" kind="show" identifier="toTheMoon" id="Xke-QS-fMP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gcK-8W-vhy">
+            <objects>
+                <viewController id="7FE-cf-kne" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ux5-QG-XWd"/>
+                        <viewControllerLayoutGuide type="bottom" id="eLu-BT-q4n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mAn-He-AGy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDk-99-RHC">
+                                <rect key="frame" x="281" y="285" width="39" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <segue destination="tb7-bg-ysM" kind="unwind" unwindAction="didReturnToMapViewController:" id="dwz-lh-t6K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dDk-99-RHC" firstAttribute="centerX" secondItem="mAn-He-AGy" secondAttribute="centerX" id="Tfb-dt-sBv"/>
+                            <constraint firstItem="dDk-99-RHC" firstAttribute="centerY" secondItem="mAn-He-AGy" secondAttribute="centerY" id="tMw-dB-bZ6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3fO-EX-kma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tb7-bg-ysM" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1281" y="380"/>
         </scene>
     </scenes>
 </document>

@@ -63,9 +63,17 @@ class ViewController: UIViewController, MKMapViewDelegate {
         return pinView
     }
 
-    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView,
-        calloutAccessoryControlTapped control: UIControl) {
-            print(__FUNCTION__)
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        print(__FUNCTION__)
+        if control == view.rightCalloutAccessoryView {
+            performSegueWithIdentifier("toTheMoon", sender: self)
+        }
+    }
+
+    // MARK: - Navigation
+
+    @IBAction func didReturnToMapViewController(segue: UIStoryboardSegue) {
+        print(__FUNCTION__)
     }
 }
 
