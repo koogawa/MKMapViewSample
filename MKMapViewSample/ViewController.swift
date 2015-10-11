@@ -36,8 +36,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     // MARK: - MKMapView delegate
 
-    // Called when the location of the user was updated
-    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+    // Called when the region displayed by the map view is about to change
+    func mapView(mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
         print(__FUNCTION__)
     }
 
