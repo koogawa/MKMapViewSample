@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="J28-Si-qmK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MKMapViewSample" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FKW-N5-3oK">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                                 <animations/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="xBw-JJ-ZEH"/>
@@ -33,6 +33,7 @@
                             <constraint firstAttribute="trailing" secondItem="FKW-N5-3oK" secondAttribute="trailing" id="zNd-q7-Giw"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="MKC-dB-C9g"/>
                     <connections>
                         <outlet property="mapView" destination="FKW-N5-3oK" id="VL6-qV-7u8"/>
                         <segue destination="7FE-cf-kne" kind="show" identifier="toTheMoon" id="Xke-QS-fMP"/>
@@ -40,6 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1289" y="992"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gcK-8W-vhy">
@@ -73,7 +75,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fO-EX-kma" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="tb7-bg-ysM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1281" y="380"/>
+            <point key="canvasLocation" x="2117" y="1403"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Xp2-tR-mIY">
+            <objects>
+                <tabBarController id="J28-Si-qmK" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ogQ-Uy-r2w">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6Vw-1h-xPv"/>
+                        <segue destination="g3h-w2-aSd" kind="relationship" relationship="viewControllers" id="4mB-B6-b47"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ESl-iu-f4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="1403"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="GNi-ct-3uN">
+            <objects>
+                <viewController id="g3h-w2-aSd" customClass="ViewController" customModule="MKMapViewSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K7f-5c-Rvh"/>
+                        <viewControllerLayoutGuide type="bottom" id="IHq-bC-67g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i7d-G3-86b">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Y5z-nT-M1B">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="delegate" destination="g3h-w2-aSd" id="fK5-4U-ff9"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y5z-nT-M1B" firstAttribute="leading" secondItem="i7d-G3-86b" secondAttribute="leading" id="Owu-3R-nLA"/>
+                            <constraint firstItem="IHq-bC-67g" firstAttribute="top" secondItem="Y5z-nT-M1B" secondAttribute="bottom" id="asa-7Z-msT"/>
+                            <constraint firstItem="Y5z-nT-M1B" firstAttribute="top" secondItem="K7f-5c-Rvh" secondAttribute="bottom" id="b76-If-kYP"/>
+                            <constraint firstAttribute="trailing" secondItem="Y5z-nT-M1B" secondAttribute="trailing" id="tRf-3t-qey"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="rgB-Ns-HcJ"/>
+                    <connections>
+                        <outlet property="mapView" destination="Y5z-nT-M1B" id="cN1-4U-5fx"/>
+                        <segue destination="7FE-cf-kne" kind="show" identifier="toTheMoon" id="Cs2-aQ-E8J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t1o-Th-PjF" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1289" y="1752"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Cs2-aQ-E8J"/>
+    </inferredMetricsTieBreakers>
 </document>
