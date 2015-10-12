@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Pin-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MKMapViewSample" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                             <constraint firstAttribute="trailing" secondItem="FKW-N5-3oK" secondAttribute="trailing" id="zNd-q7-Giw"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="MKC-dB-C9g"/>
+                    <tabBarItem key="tabBarItem" title="Pin" id="MKC-dB-C9g"/>
                     <connections>
                         <outlet property="mapView" destination="FKW-N5-3oK" id="VL6-qV-7u8"/>
                         <segue destination="7FE-cf-kne" kind="show" identifier="toTheMoon" id="Xke-QS-fMP"/>
@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="468" y="1403"/>
         </scene>
-        <!--Item-->
+        <!--Image-->
         <scene sceneID="GNi-ct-3uN">
             <objects>
-                <viewController id="g3h-w2-aSd" customClass="ViewController" customModule="MKMapViewSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="g3h-w2-aSd" customClass="ImageViewController" customModule="MKMapViewSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K7f-5c-Rvh"/>
                         <viewControllerLayoutGuide type="bottom" id="IHq-bC-67g"/>
@@ -125,7 +125,7 @@
                             <constraint firstAttribute="trailing" secondItem="Y5z-nT-M1B" secondAttribute="trailing" id="tRf-3t-qey"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="rgB-Ns-HcJ"/>
+                    <tabBarItem key="tabBarItem" title="Image" id="rgB-Ns-HcJ"/>
                     <connections>
                         <outlet property="mapView" destination="Y5z-nT-M1B" id="cN1-4U-5fx"/>
                         <segue destination="7FE-cf-kne" kind="show" identifier="toTheMoon" id="Cs2-aQ-E8J"/>

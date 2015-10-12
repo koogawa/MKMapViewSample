@@ -12,6 +12,7 @@
 		211C8F941BC9E440008078EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211C8F921BC9E440008078EA /* Main.storyboard */; };
 		211C8F961BC9E440008078EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211C8F951BC9E440008078EA /* Assets.xcassets */; };
 		211C8F991BC9E440008078EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211C8F971BC9E440008078EA /* LaunchScreen.storyboard */; };
+		211C8FA11BCB5B10008078EA /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211C8FA01BCB5B0D008078EA /* ImageViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		211C8F951BC9E440008078EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		211C8F981BC9E440008078EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		211C8F9A1BC9E440008078EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		211C8FA01BCB5B0D008078EA /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				211C8F8E1BC9E440008078EA /* AppDelegate.swift */,
 				211C8F901BC9E440008078EA /* ViewController.swift */,
+				211C8FA01BCB5B0D008078EA /* ImageViewController.swift */,
 				211C8F921BC9E440008078EA /* Main.storyboard */,
 				211C8F951BC9E440008078EA /* Assets.xcassets */,
 				211C8F971BC9E440008078EA /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				211C8F911BC9E440008078EA /* ViewController.swift in Sources */,
+				211C8FA11BCB5B10008078EA /* ImageViewController.swift in Sources */,
 				211C8F8F1BC9E440008078EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +287,7 @@
 				211C8F9F1BC9E440008078EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
