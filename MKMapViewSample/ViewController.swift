@@ -51,8 +51,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
         var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
         if pinView == nil {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-            pinView?.canShowCallout = true
             pinView?.animatesDrop = true
+            pinView?.canShowCallout = true
+            pinView?.draggable = true
             pinView?.pinColor = .Purple
 
             let rightButton: AnyObject! = UIButton(type: UIButtonType.DetailDisclosure)
@@ -69,6 +70,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
         print(__FUNCTION__)
         if control == view.rightCalloutAccessoryView {
             performSegueWithIdentifier("toTheMoon", sender: self)
+        }
+    }
+
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, didChangeDragState newState: MKAnnotationViewDragState, fromOldState oldState: MKAnnotationViewDragState) {
+        if newState == MKAnnotationViewDragState.Ending {
+            let droppedAt = view.annotation?.coordinate
+            print(droppedAt)
         }
     }
 
