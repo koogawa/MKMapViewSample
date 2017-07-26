@@ -12,7 +12,7 @@
 		211C8F941BC9E440008078EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211C8F921BC9E440008078EA /* Main.storyboard */; };
 		211C8F961BC9E440008078EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211C8F951BC9E440008078EA /* Assets.xcassets */; };
 		211C8F991BC9E440008078EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211C8F971BC9E440008078EA /* LaunchScreen.storyboard */; };
-		211C8FA11BCB5B10008078EA /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211C8FA01BCB5B0D008078EA /* ImageViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		211C8FA11BCB5B10008078EA /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211C8FA01BCB5B0D008078EA /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +98,7 @@
 				TargetAttributes = {
 					211C8F8A1BC9E440008078EA = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -254,6 +255,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.koogawa.MKMapViewSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -265,6 +267,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.koogawa.MKMapViewSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

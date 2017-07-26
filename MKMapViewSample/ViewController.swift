@@ -37,26 +37,26 @@ class ViewController: UIViewController, MKMapViewDelegate {
     // MARK: - MKMapView delegate
 
     // Called when the region displayed by the map view is about to change
-    func mapView(mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
-        print(__FUNCTION__)
+    func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
+        print(#function)
     }
 
     // Called when the annotation was added
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
             return nil
         }
 
         let reuseId = "pin"
-        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
         if pinView == nil {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             pinView?.animatesDrop = true
             pinView?.canShowCallout = true
-            pinView?.draggable = true
-            pinView?.pinColor = .Purple
+            pinView?.isDraggable = true
+            pinView?.pinColor = .purple
 
-            let rightButton: AnyObject! = UIButton(type: UIButtonType.DetailDisclosure)
+            let rightButton: AnyObject! = UIButton(type: UIButtonType.detailDisclosure)
             pinView?.rightCalloutAccessoryView = rightButton as? UIView
         }
         else {
@@ -66,15 +66,15 @@ class ViewController: UIViewController, MKMapViewDelegate {
         return pinView
     }
 
-    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        print(__FUNCTION__)
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        print(#function)
         if control == view.rightCalloutAccessoryView {
-            performSegueWithIdentifier("toTheMoon", sender: self)
+            performSegue(withIdentifier: "toTheMoon", sender: self)
         }
     }
 
-    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, didChangeDragState newState: MKAnnotationViewDragState, fromOldState oldState: MKAnnotationViewDragState) {
-        if newState == MKAnnotationViewDragState.Ending {
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, didChange newState: MKAnnotationViewDragState, fromOldState oldState: MKAnnotationViewDragState) {
+        if newState == MKAnnotationViewDragState.ending {
             let droppedAt = view.annotation?.coordinate
             print(droppedAt)
         }
@@ -82,8 +82,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     // MARK: - Navigation
 
-    @IBAction func didReturnToMapViewController(segue: UIStoryboardSegue) {
-        print(__FUNCTION__)
+    @IBAction func didReturnToMapViewController(_ segue: UIStoryboardSegue) {
+        print(#function)
     }
 }
 
