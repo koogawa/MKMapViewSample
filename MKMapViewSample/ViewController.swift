@@ -76,7 +76,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, didChange newState: MKAnnotationViewDragState, fromOldState oldState: MKAnnotationViewDragState) {
         if newState == MKAnnotationViewDragState.ending {
             let droppedAt = view.annotation?.coordinate
-            print(droppedAt)
+            print(droppedAt ?? "coordicate is nil")
         }
     }
 
