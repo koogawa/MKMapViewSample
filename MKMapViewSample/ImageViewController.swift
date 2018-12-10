@@ -18,8 +18,8 @@ class ImageViewController: UIViewController, MKMapViewDelegate {
 
         // Do any additional setup after loading the view, typically from a nib.
         let coordinate = CLLocationCoordinate2DMake(37.331652997806785, -122.03072304117417)
-        let span = MKCoordinateSpanMake(0.003, 0.003)
-        let region = MKCoordinateRegionMake(coordinate, span)
+        let span = MKCoordinateSpan.init(latitudeDelta: 0.003, longitudeDelta: 0.003)
+        let region = MKCoordinateRegion.init(center: coordinate, span: span)
         mapView.setRegion(region, animated:true)
 
         let annotation = MKPointAnnotation()
@@ -54,7 +54,7 @@ class ImageViewController: UIViewController, MKMapViewDelegate {
             pinView?.canShowCallout = true
             pinView?.image = UIImage(named: "Laugh")
 
-            let rightButton: AnyObject! = UIButton(type: UIButtonType.detailDisclosure)
+            let rightButton: AnyObject! = UIButton(type: UIButton.ButtonType.detailDisclosure)
             pinView?.rightCalloutAccessoryView = rightButton as? UIView
         }
         else {

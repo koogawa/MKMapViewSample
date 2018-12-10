@@ -18,8 +18,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
         // Do any additional setup after loading the view, typically from a nib.
         let coordinate = CLLocationCoordinate2DMake(37.331652997806785, -122.03072304117417)
-        let span = MKCoordinateSpanMake(0.003, 0.003)
-        let region = MKCoordinateRegionMake(coordinate, span)
+        let span = MKCoordinateSpan.init(latitudeDelta: 0.003, longitudeDelta: 0.003)
+        let region = MKCoordinateRegion.init(center: coordinate, span: span)
         mapView.setRegion(region, animated:true)
 
         let annotation = MKPointAnnotation()
@@ -56,7 +56,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             pinView?.isDraggable = true
             pinView?.pinColor = .purple
 
-            let rightButton: AnyObject! = UIButton(type: UIButtonType.detailDisclosure)
+            let rightButton: AnyObject! = UIButton(type: UIButton.ButtonType.detailDisclosure)
             pinView?.rightCalloutAccessoryView = rightButton as? UIView
         }
         else {
@@ -73,10 +73,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
         }
     }
 
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, didChange newState: MKAnnotationViewDragState, fromOldState oldState: MKAnnotationViewDragState) {
-        if newState == MKAnnotationViewDragState.ending {
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, didChange newState: MKAnnotationView.DragState, fromOldState oldState: MKAnnotationView.DragState) {
+        if newState == MKAnnotationView.DragState.ending {
             let droppedAt = view.annotation?.coordinate
-            print(droppedAt)
+            print(droppedAt.debugDescription)
         }
     }
 
