@@ -104,10 +104,9 @@
 			};
 			buildConfigurationList = 211C8F861BC9E440008078EA /* Build configuration list for PBXProject "MKMapViewSample" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
