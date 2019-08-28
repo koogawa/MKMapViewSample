@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Show Xcode version
+      run: xcodebuild -version
+    - name: Build
+      run: xcodebuild -allowProvisioningUpdates
